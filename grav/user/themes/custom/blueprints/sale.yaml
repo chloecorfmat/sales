@@ -1,0 +1,458 @@
+title: Page de vente
+
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Contenu
+
+          fields:
+            header.hero:
+              type: fieldset
+              title: Bloc "Hero"
+              collapsed: true
+              collapsible: true
+              fields:
+                header.hero.title:
+                  type: text
+                  label: Titre
+                  default: Améliorez votre présence en ligne !
+                  validate:
+                    required: true
+                header.hero.text:
+                  type: editor
+                  label: Texte
+                  autofocus: true
+                  validate:
+                    type: textarea
+                header.hero.picture.file:
+                  type: file
+                  label: Photo
+                  accept:
+                    - image/*
+                header.hero.picture.alt:
+                  type: text
+                  label: Attribut alt
+                header.hero.buttons:
+                  name: buttons
+                  type: list
+                  style: vertical
+                  label: Boutons
+                  btnLabel: Ajouter un bouton
+                  min: 1
+                  max: 2
+                  fields:
+                    .links:
+                      type: elements
+                      label: Type de bouton
+                      size: large
+                      default: link
+                      options:
+                        link: Lien
+                        file: Fichier
+                      fields:
+                        link:
+                          type: element
+                          fields:
+                            .text:
+                              type: text
+                              label: Texte
+                            .classes:
+                              type: text
+                              label: Classes
+                            .url:
+                              type: text
+                              label: URL
+                            .target:
+                              type: selectize
+                              size: large
+                              label: Target
+                              selectize:
+                                options:
+                                  - text: "self"
+                                    value: "_self"
+                                  - text: "blank"
+                                    value: "_blank"
+                              default: "_self"
+                              classes: fancy
+                              validate:
+                                type: commalist
+                        file:
+                          type: element
+                          fields:
+                            .text:
+                              type: text
+                              label: Texte
+                            .classes:
+                              type: text
+                              label: Classes
+                            .file:
+                              type: file
+                              label: Fichier
+                              accept:
+                                - application/pdf
+
+            header.block_why:
+              type: fieldset
+              title: Bloc "Pourquoi"
+              collapsed: true
+              collapsible: true
+              fields:
+                header.block_why.title:
+                  type: text
+                  label: Titre
+                  help: Si une partie du titre doit être mise en avant, l'entourer de "%%".
+                  default: Pourquoi %%un site%% web ?
+                  validate:
+                    required: true
+                header.block_why.cards:
+                  name: cards
+                  type: list
+                  style: vertical
+                  label: Cartes
+                  min: 3
+                  max: 3
+                  fields:
+                    .title:
+                      type: text
+                      label: Titre
+                    .content:
+                      type: editor
+                      label: Contenu
+                      validate:
+                        type: textarea
+                    .image:
+                      type: file
+                      label: Image
+                      accept:
+                        - image/*
+
+            header.block_presentation:
+              type: fieldset
+              title: Bloc "Présentation"
+              collapsed: true
+              collapsible: true
+              fields:
+                header.block_presentation.title:
+                  type: text
+                  label: Titre
+                  default: À propos de Chloé Corfmat
+                  help: Ce titre ne s'affiche pas, mais il est utile pour l'accessibilité.
+                  validate:
+                    required: true
+                header.block_presentation.lines:
+                  name: lines
+                  type: list
+                  style: vertical
+                  label: Lignes
+                  fields:
+                    .content:
+                      type: editor
+                      label: Contenu
+                      validate:
+                        type: textarea
+                    .picture:
+                      type: file
+                      label: Photo
+                      accept:
+                        - image/*
+                    .position:
+                      type: selectize
+                      size: large
+                      label: Position de la photo
+                      selectize:
+                        options:
+                          - text: "Droite"
+                            value: "right"
+                          - text: "Gauche"
+                            value: "left"
+                      default: "right"
+                      classes: fancy
+                      validate:
+                        type: commalist
+                    .button:
+                      type: elements
+                      label: Lien
+                      size: large
+                      default: link
+                      options:
+                        link: Lien
+                        file: Fichier
+                      fields:
+                        link:
+                          type: element
+                          fields:
+                            .text:
+                              type: text
+                              label: Texte
+                            .classes:
+                              type: text
+                              label: Classes
+                            .url:
+                              type: text
+                              label: URL
+                            .target:
+                              type: selectize
+                              size: large
+                              label: Target
+                              selectize:
+                                options:
+                                  - text: "_self"
+                                    value: "_self"
+                                  - text: "_blank"
+                                    value: "_blank"
+                              default: "_self"
+                              classes: fancy
+                              validate:
+                                type: commalist
+                        file:
+                          type: element
+                          fields:
+                            .text:
+                              type: text
+                              label: Texte
+                            .classes:
+                              type: text
+                              label: Classes
+                            .file:
+                              type: file
+                              label: Fichier
+                              accept:
+                                - application/pdf
+
+            header.block_offers:
+              type: fieldset
+              title: Bloc "Offres"
+              collapsed: true
+              collapsible: true
+              fields:
+                header.block_offers.title:
+                  type: text
+                  label: Titre
+                  default: Je vous accompagne
+                  validate:
+                    required: true
+                header.block_offers.introduction:
+                  type: editor
+                  label: Introduction
+                  validate:
+                    type: textarea
+
+            header.block_chaton:
+              type: fieldset
+              title: Bloc "Discutons"
+              collapsed: true
+              collapsible: true
+              fields:
+                header.block_chaton.title:
+                  type: text
+                  label: Titre
+                  default: Discutons de votre projet
+                  validate:
+                    required: true
+                header.block_chaton.content:
+                  type: editor
+                  label: Contenu
+                  validate:
+                    type: textarea
+                header.block_chaton.link:
+                  type: fieldset
+                  title: Lien
+                  collapsed: false
+                  collapsible: false
+                  fields:
+                    .text:
+                      type: text
+                      label: Texte
+                    .classes:
+                      type: text
+                      label: Classes
+                    .url:
+                      type: text
+                      label: URL
+                    .target:
+                      type: selectize
+                      size: large
+                      label: Target
+                      selectize:
+                        options:
+                          - text: "_self"
+                            value: "_self"
+                          - text: "_blank"
+                            value: "_blank"
+                      default: "_self"
+                      classes: fancy
+                      validate:
+                        type: commalist
+
+            header.block_steps:
+              type: fieldset
+              title: Bloc "Étapes"
+              collapsed: true
+              collapsible: true
+              fields:
+                header.block_steps.title:
+                  type: text
+                  label: Titre
+                  default: Travaillons ensemble !
+                  validate:
+                    required: true
+                header.block_steps.cards:
+                  name: cards
+                  type: list
+                  style: vertical
+                  label: Cartes
+                  fields:
+                    .title:
+                      type: text
+                      label: Titre
+                    .content:
+                      type: editor
+                      label: Contenu
+                      validate:
+                        type: textarea
+                    .image:
+                      type: file
+                      label: Image
+                      accept:
+                        - image/*
+                header.block_steps.content:
+                  type: editor
+                  label: Contenu
+                  validate:
+                    type: textarea
+
+            header.block_testimonials:
+              type: fieldset
+              title: Bloc "Témoignages"
+              collapsed: true
+              collapsible: true
+              fields:
+                header.block_testimonials.title:
+                  type: text
+                  label: Titre
+                  default: Ils parlent de moi
+                  validate:
+                    required: true
+                header.block_testimonials.testimonials:
+                  name: testimonials
+                  type: list
+                  style: vertical
+                  label: Témoignages
+                  min: 1
+                  fields:
+                    .quote:
+                      type: text
+                      label: Citation
+                    .author:
+                      type: text
+                      label: Auteur
+
+            header.block_meet:
+              type: fieldset
+              title: Bloc "Contact"
+              collapsed: true
+              collapsible: true
+              fields:
+                header.block_meet.title:
+                  type: text
+                  label: Titre
+                  default: Rencontrons-nous !
+                  validate:
+                    required: true
+                header.block_meet.form:
+                  type: fieldset
+                  title: Formulaire de contact
+                  collapsed: false
+                  collapsible: false
+                  fields:
+                    header.block_meet.form.message:
+                      type: editor
+                      label: Message
+                      validate:
+                        type: textarea
+                        required: true
+                    header.block_meet.form.displayed:
+                      type: toggle
+                      label: Afficher le formulaire
+                      highlight: 1
+                      default: 1
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+                    header.block_meet.form.action:
+                      type: text
+                      label: Attribut action du formulaire
+                      default:
+                      validate:
+                        required: true
+                header.block_meet.links:
+                  type: fieldset
+                  title: Liens de contact
+                  collapsed: false
+                  collapsible: false
+                  fields:
+                    header.block_meet.links.introduction:
+                      type: text
+                      label: Titre
+                      default: 'Vous pouvez aussi me contacter par :'
+                      validate:
+                        required: true
+                    header.block_meet.links.links:
+                      name: links
+                      type: list
+                      style: vertical
+                      label: Liens
+                      min: 2
+                      fields:
+                        .text:
+                          type: text
+                          label: Texte
+                        .text_clickable:
+                          type: text
+                          label: Texte cliquable
+                        .help:
+                          type: text
+                          label: Texte d'aide
+                        .url:
+                          type: text
+                          label: URL
+                        .target:
+                          type: selectize
+                          size: large
+                          label: Target
+                          selectize:
+                            options:
+                              - text: "_self"
+                                value: "self"
+                              - text: "_blank"
+                                value: "blank"
+                          default: "self"
+                          classes: fancy
+                          validate:
+                            type: commalist
+                header.block_meets.media:
+                  type: fieldset
+                  title: Réseaux sociaux
+                  collapsed: false
+                  collapsible: false
+                  fields:
+                    header.block_meet.media.introduction:
+                      type: text
+                      label: Titre
+                      default: 'Je suis aussi présente sur les réseaux sociaux'
+                      validate:
+                        required: true
+
+            route:
+              type: parents
+              label: PLUGIN_ADMIN.PARENT
+              classes: fancy

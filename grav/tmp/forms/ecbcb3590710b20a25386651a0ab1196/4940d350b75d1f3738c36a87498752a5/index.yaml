@@ -1,0 +1,31 @@
+form: flex-pages
+id: 'tmp://forms/session/4940d350b75d1f3738c36a87498752a5'
+unique_id: 4940d350b75d1f3738c36a87498752a5
+url: '/pages/home/:add'
+user:
+  username: chloecorfmat
+  email: contact@chloecorfmat.fr
+timestamps:
+  created: 1695402843
+  updated: 1695402843
+data: null
+files: {  }
+object:
+  type: pages
+  key: home
+  storage_key: ''
+  timestamp: 0
+  serialized:
+    __META: {  }
+    storage_key: ''
+    parent_key: ''
+    order: false
+    folder: home
+    template: sales
+    lang: ''
+    root: false
+    route: /
+    name: sales
+    header:
+      title: 'Page de vente'
+    frontmatter: "title: 'Page de vente'\n"

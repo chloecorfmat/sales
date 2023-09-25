@@ -1,0 +1,52 @@
+# Composer
+.composer
+vendor/*
+*/vendor/*
+
+node_modules/*
+*/node_modules/*
+
+# Sass
+.sass-cache
+
+# Grav Specific
+grav/backup/*
+!grav/backup/.*
+grav/cache/*
+!grav/cache/.*
+grav/assets/*
+!grav/assets/.*
+grav/logs/*
+!grav/logs/.*
+igrav/mages/*
+!grav/images/.*
+grav/user/accounts/*
+!grav/user/accounts/.*
+grav/user/data/*
+!grav/user/data/.*
+grav/user/plugins/*
+!grav/user/plugins/.*
+grav/user/themes/quark/*
+grav/user/**/config/security.yaml
+
+# Environments
+.env
+.gravenv
+
+# OS Generated
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
+
+# phpstorm
+.idea/*
+
+# testing stuff
+tests/_output/*
+tests/_support/_generated/*
+tests/cache/*
+tests/error.log
+system/templates/testing/*
+/user/config/versions.yaml

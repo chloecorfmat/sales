@@ -1,0 +1,32 @@
+name: Custom
+slug: custom
+type: theme
+version: 1.6.7
+description: "Custom is the default theme for Chloé Corfmat's portfolio"
+icon: empire
+author:
+  name: Chloé Corfmat
+  email: contact@chloecorfmat.fr
+  url: https://chloecorfmat.fr
+homepage: https://github.com/chloecorfmat
+demo: https://chloecorfmat.fr
+keywords: custom, theme, core, fast, responsive, html5, css3
+bugs: https://github.com/chloecorfmat
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+      type: toggle
+      label: Dropdown in navbar
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

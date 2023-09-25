@@ -1,0 +1,83 @@
+form: flex-pages
+id: 'tmp://forms/session/3a4eeff82879f2e8f71f398366f91473'
+unique_id: 3a4eeff82879f2e8f71f398366f91473
+url: 'http://localhost:8080/admin/pages/test'
+user:
+  username: chloecorfmat
+  email: contact@chloecorfmat.fr
+timestamps:
+  created: 1695567621
+  updated: 1695567675
+data:
+  header:
+    title: Test
+    body_classes: null
+    an_example_text_field: 0
+    order_by: null
+    order_manual: null
+    media_order: null
+    published: null
+    date: null
+    publish_date: null
+    unpublish_date: null
+    metadata: null
+    taxonomy: null
+    dateformat: null
+    menu: null
+    slug: null
+    redirect: null
+    process: null
+    twig_first: null
+    never_cache_twig: null
+    child_type: null
+    routable: null
+    cache_enable: null
+    visible: null
+    debugger: null
+    template: null
+    append_url_extension: null
+    redirect_default_route: null
+    routes:
+      default: null
+      canonical: null
+      aliases: null
+    admin:
+      children_display_order: null
+    login:
+      visibility_requires_access: null
+    access: null
+    permissions:
+      inherit: null
+      authors: null
+      groups: null
+  content: null
+  folder: test
+  route: null
+  name: test
+  ordering: false
+  order: null
+  blueprint: null
+  lang: null
+  xss_check: null
+  _post_entries_save: null
+files: {  }
+object:
+  type: pages
+  key: test
+  storage_key: ''
+  timestamp: 0
+  serialized:
+    __META: {  }
+    storage_key: ''
+    parent_key: ''
+    order: false
+    folder: test
+    template: test
+    lang: ''
+    header:
+      title: Test
+    root: false
+    route: /
+    name: test
+    frontmatter: "title: Test\n"
+    slug: test

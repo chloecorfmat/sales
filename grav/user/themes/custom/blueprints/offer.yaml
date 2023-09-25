@@ -1,0 +1,49 @@
+title: Offre
+
+form:
+  validation: loose
+
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Contenu
+
+          fields:
+            header.title:
+              type: text
+              label: Titre
+              validate:
+                required: true
+            header.content:
+              type: editor
+              label: Contenu
+              validate:
+                type: textarea
+            header.content_detailed:
+              type: editor
+              label: Contenu détaillé
+              validate:
+                type: textarea
+            header.image:
+              type: file
+              label: Image
+              accept:
+                - image/*
+            header.weight:
+              type: text
+              label: Poids
+              help: Le poids le plus petit s'affiche en premier.
+              validate:
+                required: true
+                min: 1
+                type: number
+
+            route:
+              type: parents
+              label: PLUGIN_ADMIN.PARENT
+              classes: fancy

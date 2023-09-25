@@ -1,0 +1,378 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <main>
+        <div class="block-hero" id="block-hero">
+            <img src="{{ url('theme://assets/01_sales.png')|e }}" alt="" class="block-hero__asset--1" />
+
+            <div class="block-hero__content">
+                <img src="{{ url(header.hero.picture.file|first.path) }}" alt="{{ header.hero.picture.alt }}" class="block-hero__image"/>
+
+                <div class="block-hero__text">
+                    <h1 class="block-hero__title">{{ header.hero.title }}</h1>
+                    <div class="wysiwyg">
+                        {% markdown %}
+                            {{ header.hero.text }}
+                        {% endmarkdown %}
+                    </div>
+
+                    <div class="btns-container">
+                        {% for button in header.hero.buttons %}
+                            {% if button.links is same as('link') %}
+                                <a
+                                        href="{{ button.link.url }}"
+                                        class="{{ button.link.classes }}"
+                                        target="{{ button.link.target }}"
+                                        title="{% if button.link.target is same as('_blank') %}{{ button.link.text }} - Nouvelle fenêtre{% endif %}"
+                                >
+                                    {{ button.link.text }}
+                                    {% if button.link.target is same as('_self') %}
+                                        <span class="icon-internal-link fa-solid fa-chevron-right fa-xs" aria-hidden="true"></span>
+                                    {% endif %}
+                                    {% if button.link.target is same as('_blank') %}
+                                        <span class="icon-external-link fa-solid fa-arrow-up-right-from-square fa-xs" aria-hidden="true"></span>
+                                    {% endif %}
+                                </a>
+                            {% endif %}
+
+                            {% if button.links is same as('file') %}
+                                {% for file in button.file.file %}
+                                    <a
+                                            href="{{ url(file.path) }}"
+                                            class="{{ button.file.classes }}"
+                                            title="{{ button.file.text }} - Nouvelle fenêtre"
+                                            target="_blank"
+                                    >
+                                        {{ button.file.text }}
+                                        <span class="icon-dl-link fa-solid fa-download fa-xs" aria-hidden="true"></span>
+                                    </a>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <img src="{{ url('theme://assets/02_sales.png')|e }}" alt="" class="block-hero__asset--2"/>
+        </div>
+
+        <div class="block">
+            <img src="{{ url('theme://assets/03_sales.png')|e }}" alt="" class="block-why__asset--1" />
+
+            <div class="block-why" id="block-why">
+                <h2>{{ header.block_why.title|blockTitle|raw }}</h2>
+                <ul class="cards-list">
+                    {% for card in header.block_why.cards %}
+                        <li class="cards-item">
+                            <img src="{{ url(card.image|first.path) }}" alt="" class="cards-item__image"/>
+
+                            <div class="cards-item__content">
+                                <h3 class="cards-item__title">{{ card.title }}</h3>
+                                <div class="wysiwyg">
+                                    {% markdown %}
+                                        {{ card.content }}
+                                    {% endmarkdown %}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <img src="{{ url('theme://assets/04_sales.png')|e }}" alt="" class="block-why__asset--2"/>
+        </div>
+
+        <div class="block">
+            <img src="{{ url('theme://assets/05_sales.png')|e }}" alt="" class="block-presentation__asset--1" />
+
+            <div class="block-presentation" id="block-presentation">
+                <h2 class="sr-only">{{  header.block_presentation.title }}</h2>
+                {% for line in header.block_presentation.lines %}
+                    <div class="block-presentation__row">
+                        {% if line.position|first is same as('left') %}
+                            <img src="{{ url(line.picture|first.path) }}" alt=""  class="block-presentation__image"/>
+                        {% endif %}
+                        <div class="block-presentation__content">
+                            <div class="wysiwyg">
+                                {% markdown %}
+                                    {{ line.content }}
+                                {% endmarkdown %}
+                            </div>
+
+                            {% if line.link.url is not empty or line.file.file|first.path is not empty %}
+                                <div class="btns-container btns-container--centered">
+                                    {% if line.button is same as('link') %}
+                                        <a
+                                                href="{{ line.link.url }}"
+                                                class="{{ line.link.classes }}"
+                                                target="{{ line.link.target }}"
+                                                title="{% if line.link.target is same as('_blank') %}{{ line.link.text }} - Nouvelle fenêtre{% endif %}"
+                                        >
+                                            {{ line.link.text }}
+                                            {% if line.link.target is same as('_self') %}
+                                                <span class="icon-internal-link fa-solid fa-chevron-right fa-xs" aria-hidden="true"></span>
+                                            {% endif %}
+                                            {% if line.link.target is same as('_blank') %}
+                                                <span class="icon-external-link fa-solid fa-arrow-up-right-from-square fa-xs" aria-hidden="true"></span>
+                                            {% endif %}
+                                        </a>
+                                    {% endif %}
+
+                                    {% if line.button is same as('file') %}
+                                        <a
+                                                href="{{ url(line.file.file|first.path) }}"
+                                                class="{{ line.file.classes }}"
+                                                title="{{ line.file.text }} - Nouvelle fenêtre"
+                                                target="_blank"
+                                        >
+                                            {{ line.file.text }}
+                                            <span class="icon-dl-link fa-solid fa-download fa-xs" aria-hidden="true"></span>
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        {% if line.position|first is same as('right') %}
+                            <img src="{{ url(line.picture|first.path) }}" alt=""  class="block-presentation__image"/>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="block">
+            <img src="{{ url('theme://assets/07_sales.png')|e }}" alt="" class="block-offers__asset--1" />
+
+            <div class="block-offers" id="block-offers">
+                <h2>{{ header.block_offers.title|blockTitle|raw }}</h2>
+                <div class="block-offers__infos wysiwyg">
+                    {% markdown %}
+                        {{ header.block_offers.introduction }}
+                    {% endmarkdown %}
+                </div>
+
+                <div class="switcher">
+                    <button class="switcher__item switcher__item--active" data-foldable="true">Je ne maîtrise pas trop</button>
+                    <button class="switcher__item" data-foldable="false">Je veux des détails</button>
+                </div>
+                <ul class="cards-list" id="cards-list--offers">
+                    {% set options = { items: {'@page.children': '/offers'}, 'limit': 3, 'order': {'by': 'header.weight', 'dir': 'asc'} } %}
+                    {% for offer in page.collection(options) %}
+                        <li class="cards-item cards-item--foldable">
+                            <img src="{{ url(offer.route ~ '/' ~ offer.header.image|first.path) }}" alt="" class="cards-item__image"/>
+
+                            <div class="cards-item__content cards-item__content--fold">
+                                <h3 class="cards-item__title">{{ offer.header.title }}</h3>
+                                <div class="wysiwyg">
+                                    {% markdown %}
+                                        {{ offer.header.content }}
+                                    {% endmarkdown %}
+                                </div>
+                            </div>
+                            <div class="cards-item__content cards-item__content--unfold" aria-hidden="true">
+                                <div class="wysiwyg">
+                                    {% markdown %}
+                                        {{ offer.header.content_detailed }}
+                                    {% endmarkdown %}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <img src="{{ url('theme://assets/08_sales.png')|e }}" alt="" class="block-offers__asset--2" />
+        </div>
+
+        <div class="block-chat-on" id="block-chaton">
+            <div class="block-chat-on__container">
+                <h2>{{ header.block_chaton.title|blockTitle|raw }}</h2>
+                <div class="block-chat-on__content">
+                    <div class="block-chat-on__text wysiwyg">
+                        {% markdown %}
+                            {{ header.block_chaton.content }}
+                        {% endmarkdown %}
+                        <div class="btns-container btns-container--centered">
+                            <a
+                                    href="{{ header.block_chaton.link.url }}"
+                                    class="{{ header.block_chaton.link.classes }}"
+                                    target="{{ header.block_chaton.link.target|first }}"
+                                    title="{% if header.block_chaton.link.target|first is same as('_blank') %}{{ header.block_chaton.link.text }} - Nouvelle fenêtre{% endif %}"
+                            >
+                                {{ header.block_chaton.link.text }}
+                                {% if header.block_chaton.link.target|first is same as('_self') %}
+                                    <span class="icon-internal-link fa-solid fa-chevron-right fa-xs" aria-hidden="true"></span>
+                                {% endif %}
+                                {% if header.block_chaton.link.target|first is same as('_blank') %}
+                                    <span class="icon-external-link fa-solid fa-arrow-up-right-from-square fa-xs" aria-hidden="true"></span>
+                                {% endif %}
+                            </a>
+                        </div>
+                    </div>
+                    <div  class="block-chat-on__images">
+                        <img src="{{ url('theme://assets/illustration-chat-on_640x320.png')|e }}" alt=""   class="block-chat-on__images-item"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block">
+            <img src="{{ url('theme://assets/09_sales.png')|e }}" alt="" class="block-steps__asset--1" />
+
+            <div class="block-steps" id="block-steps">
+                <h2>{{ header.block_steps.title|blockTitle|raw }}</h2>
+                <ul class="cards-list">
+                    {% for card in header.block_steps.cards %}
+                        <li class="cards-item">
+                            <img src="{{ url(card.image|first.path) }}" alt="" class="cards-item__image"/>
+
+                            <div class="cards-item__content">
+                                <h3 class="cards-item__title">{{ card.title }}</h3>
+                                <div class="wysiwyg">
+                                    {% markdown %}
+                                        {{ card.content }}
+                                    {% endmarkdown %}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="block-steps__infos wysiwyg">
+                    {% markdown %}
+                        {{ header.block_steps.content }}
+                    {% endmarkdown %}
+                </div>
+            </div>
+
+            <img src="{{ url('theme://assets/10_sales.png')|e }}" alt="" class="block-steps__asset--2" />
+        </div>
+
+        <div class="block-testimonials" id="block-testimonials">
+            <div class="block-testimonials__container">
+                <h2>{{ header.block_testimonials.title|blockTitle|raw }}</h2>
+                <ul class="block-testimonials__list">
+                    {# {% for testimonial in header.block_testimonials.testimonials %}
+                        <li class="block-testimonials__item">
+                            <blockquote cite="https://www.linkedin.com/in/chloecorfmat/" class="block-testimonials__blockquote">
+                                <p class="block-testimonials__quote">{{ testimonial.quote }}</p>
+                                <footer>
+                                    <p class="block-testimonials__quote-author">{{ testimonial.author }}</p>
+                                </footer>
+                            </blockquote>
+                        </li>
+                    {% endfor %} #}
+
+                    <li class="block-testimonials__item">
+                        <blockquote cite="https://www.linkedin.com/in/chloecorfmat/" class="block-testimonials__blockquote">
+                            <p class="block-testimonials__quote">{{ header.block_testimonials.testimonials|first.quote }}</p>
+                            <footer>
+                                <p class="block-testimonials__quote-author">{{ header.block_testimonials.testimonials|first.author }}</p>
+                            </footer>
+                        </blockquote>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="block">
+            <img src="{{ url('theme://assets/11_sales.png')|e }}" alt=""  class="block-meet__asset--1" />
+
+            <div class="block-meet" id="contact">
+                <h2>{{ header.block_meet.title|blockTitle|raw }}</h2>
+                <div class="block-meet__content">
+                    {% if header.block_meet.form.displayed %}
+                        <div class="block-meet__column">
+                            <div class="wysiwyg">
+                                {% markdown %}
+                                    {{ header.block_meet.form.message }}
+                                {% endmarkdown %}
+                            </div>
+
+                            <form class="form" action="{{ header.block_meet.form.action }}">
+                                <p class="form__required-message">Les champs précédés d’une astérisque rouge (<span class="required">*</span>) sont obligatoires.</p>
+
+                                <div class="form__field">
+                                    <label for="name">Votre nom <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" required class="form__input"/>
+                                </div>
+                                <div class="form__field">
+                                    <label for="email">Votre adresse e-mail <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required class="form__input"/>
+                                </div>
+                                <div class="form__field">
+                                    <label for="object">Votre objet <span class="required">*</span></label>
+                                    <select name="object" id="object" required class="form__select">
+                                        <option value="">--Choisir une option--</option>
+                                        <option value="meet">Demander un rendez-vous pour un appel découverte</option>
+                                        <option value="ask">Me poser une question</option>
+                                        <option value="react">Réagir à une publication sur Internet</option>
+                                    </select>
+                                </div>
+                                <div class="form__field">
+                                    <label for="message">Votre message <span class="required">*</span></label>
+                                    <textarea name="message" id="message" cols="30" rows="10" required class="form__textarea"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--submit btn--primary">Envoyer votre message</button>
+                            </form>
+                        </div>
+                    {% endif %}
+                    <div class="block-meet__column">
+                        <h3 class="block-meet__contact-title">{{ header.block_meet.links.introduction }}</h3>
+                        <ul class="block-meet__contact-list">
+                            {% for link in header.block_meet.links.links %}
+                                <li class="block-meet__contact-list-item">
+                                    <strong>{{ link.text  }}</strong>
+                                    <a
+                                            href="{{ link.url }}"
+                                            class="block-meet__contact-list-link"
+                                            target="{{ link.target|first }}"
+                                            title="{% if link.target|first is same as('_blank') %} {{ link.url}} - Nouvelle fenêtre{% endif %}"
+                                    >
+                                        {{ link.text_clickable  }}
+                                        {% if link.target|first is same as('_self') %}
+                                            <span class="icon-internal-link fa-solid fa-chevron-right fa-xs" aria-hidden="true"></span>
+                                        {% endif %}
+                                        {% if link.target|first is same as('_blank') %}
+                                            <span class="icon-external-link fa-solid fa-arrow-up-right-from-square fa-xs" aria-hidden="true"></span>
+                                        {% endif %}
+                                    </a>
+                                    {% if link.help is not empty %}
+                                        <p class="block-meet__contact-list-info">({{ link.help }})</p>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+
+                        <h3 class="block-meet__contact-title">{{ header.block_meet.media.introduction }}</h3>
+                        <ul class="block-meet__social-list">
+                            <li class="block-meet__social-list-item">
+                                <a href="#" target="_blank" title="Github - Nouvelle fenêtre" class="block-meet__social-list-link">
+                                    <i class="fa-brands fa-github fa-xl"></i>
+                                </a>
+                            </li>
+                            <li class="block-meet__social-list-item">
+                                <a href="#" target="_blank" title="LinkedIn - Nouvelle fenêtre" class="block-meet__social-list-link">
+                                    <i class="fa-brands fa-linkedin fa-xl"></i>
+                                </a>
+                            </li>
+                            <li class="block-meet__social-list-item">
+                                <a href="#" target="_blank" title="X (nouveau Twitter) - Nouvelle fenêtre" class="block-meet__social-list-link">
+                                    <i class="fa-brands fa-x-twitter fa-xl"></i>
+                                </a>
+                            </li>
+                            <li class="block-meet__social-list-item">
+                                <a href="#" target="_blank" title="Instagram - Nouvelle fenêtre" class="block-meet__social-list-link">
+                                    <i class="fa-brands fa-instagram fa-xl"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <img src="{{ url('theme://assets/12_sales.png')|e }}" alt=""  class="block-meet__asset--2" />
+        </div>
+
+    </main>
+{% endblock %}
