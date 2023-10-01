@@ -13,11 +13,23 @@ form:
           title: Contenu
 
           fields:
+            header.routable:
+              type: toggle
+              label: PLUGIN_ADMIN.ROUTABLE
+              help: PLUGIN_ADMIN.ROUTABLE_HELP
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              default: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+
             header.hero:
               type: fieldset
               title: Bloc "Hero"
-              collapsed: true
-              collapsible: true
+              collapsed: false
+              collapsible: false
               fields:
                 header.hero.title:
                   type: text
@@ -101,14 +113,14 @@ form:
             header.block_why:
               type: fieldset
               title: Bloc "Pourquoi"
-              collapsed: true
-              collapsible: true
+              collapsed: false
+              collapsible: false
               fields:
                 header.block_why.title:
                   type: text
                   label: Titre
                   help: Si une partie du titre doit être mise en avant, l'entourer de "%%".
-                  default: Pourquoi %%un site%% web ?
+                  default: Pourquoi un %%site web%% ?
                   validate:
                     required: true
                 header.block_why.cards:
@@ -136,8 +148,8 @@ form:
             header.block_presentation:
               type: fieldset
               title: Bloc "Présentation"
-              collapsed: true
-              collapsible: true
+              collapsed: false
+              collapsible: false
               fields:
                 header.block_presentation.title:
                   type: text
@@ -229,13 +241,13 @@ form:
             header.block_offers:
               type: fieldset
               title: Bloc "Offres"
-              collapsed: true
-              collapsible: true
+              collapsed: false
+              collapsible: false
               fields:
                 header.block_offers.title:
                   type: text
                   label: Titre
-                  default: Je vous accompagne
+                  default: Je vous %%accompagne%%
                   validate:
                     required: true
                 header.block_offers.introduction:
@@ -247,13 +259,13 @@ form:
             header.block_chaton:
               type: fieldset
               title: Bloc "Discutons"
-              collapsed: true
-              collapsible: true
+              collapsed: false
+              collapsible: false
               fields:
                 header.block_chaton.title:
                   type: text
                   label: Titre
-                  default: Discutons de votre projet
+                  default: Discutons de %%votre projet%%
                   validate:
                     required: true
                 header.block_chaton.content:
@@ -294,13 +306,13 @@ form:
             header.block_steps:
               type: fieldset
               title: Bloc "Étapes"
-              collapsed: true
-              collapsible: true
+              collapsed: false
+              collapsible: false
               fields:
                 header.block_steps.title:
                   type: text
                   label: Titre
-                  default: Travaillons ensemble !
+                  default: Travaillons %%ensemble%% !
                   validate:
                     required: true
                 header.block_steps.cards:
@@ -331,13 +343,13 @@ form:
             header.block_testimonials:
               type: fieldset
               title: Bloc "Témoignages"
-              collapsed: true
-              collapsible: true
+              collapsed: false
+              collapsible: false
               fields:
                 header.block_testimonials.title:
                   type: text
                   label: Titre
-                  default: Ils parlent de moi
+                  default: Ils parlent %%de moi%%
                   validate:
                     required: true
                 header.block_testimonials.testimonials:
@@ -357,13 +369,13 @@ form:
             header.block_meet:
               type: fieldset
               title: Bloc "Contact"
-              collapsed: true
-              collapsible: true
+              collapsed: false
+              collapsible: false
               fields:
                 header.block_meet.title:
                   type: text
                   label: Titre
-                  default: Rencontrons-nous !
+                  default: Rencontrons-%%nous%% !
                   validate:
                     required: true
                 header.block_meet.form:
@@ -432,10 +444,10 @@ form:
                           selectize:
                             options:
                               - text: "_self"
-                                value: "self"
+                                value: "_self"
                               - text: "_blank"
-                                value: "blank"
-                          default: "self"
+                                value: "_blank"
+                          default: "_self"
                           classes: fancy
                           validate:
                             type: commalist

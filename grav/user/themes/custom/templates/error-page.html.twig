@@ -1,0 +1,29 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <main class="error">
+        <div class="error__content">
+            <h1 class="error__title">{{ header.name|blockTitle|raw}}</h1>
+            <p class="error__subtitle">{{ header.subtitle }}</p>
+
+            <div class="error__navigation">
+                <p>Pour poursuivre votre navigation, vous pouvez retourner sur l'accueil.</p>
+                <a
+                        href="{{ header.link.url }}"
+                        class="{{ header.link.classes }}"
+                        target="{{ header.link.target|first }}"
+                        title="{% if header.link.target|first is same as('_blank') %}{{ header.link.text }} - Nouvelle fenêtre{% endif %}"
+                >
+                    {{ header.link.text }}
+                    {% if header.link.target|first is same as('_self') %}
+                        <span class="icon-internal-link fa-solid fa-chevron-right fa-xs" aria-hidden="true"></span>
+                    {% endif %}
+                    {% if header.link.target|first is same as('_blank') %}
+                        <span class="icon-external-link fa-solid fa-arrow-up-right-from-square fa-xs" aria-hidden="true"></span>
+                    {% endif %}
+                </a>
+            </div>
+        </div>
+    </main>
+    <img src="{{ page.folder ~ '/' ~ url(header.image|first.path) }}" alt="" class="error__image" />
+{% endblock %}

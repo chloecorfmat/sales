@@ -1,0 +1,24 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <main class="page">
+        <div class="page__content">
+            <h1>{{ header.name|blockTitle|raw }}</h1>
+
+            {% if header.description is not empty %}
+                <p class="page__description">{{ header.description }}</p>
+            {% endif
+            %}
+            {% for paragraph in header.paragraphs %}
+                <div class="paragraph">
+                    <h2>{{ paragraph.title }}</h2>
+                    <div class="wysiwyg">
+                        {% markdown %}
+                            {{ paragraph.content }}
+                        {% endmarkdown %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

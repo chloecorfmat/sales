@@ -9,5 +9,6 @@ image:
         type: image/png
         size: 17575
         path: shine-diverse-people-of-different-ages_270x270.png
+routable: false
 ---
 

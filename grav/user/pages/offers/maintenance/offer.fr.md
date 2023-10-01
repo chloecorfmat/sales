@@ -9,5 +9,6 @@ image:
         type: image/png
         size: 11142
         path: shine-young-woman-pointing-to-a-question_270x270.png
+routable: false
 ---
 

@@ -155,7 +155,7 @@
                     <button class="switcher__item switcher__item--active" data-foldable="true">Je ne maîtrise pas trop</button>
                     <button class="switcher__item" data-foldable="false">Je veux des détails</button>
                 </div>
-                <ul class="cards-list" id="cards-list--offers">
+                <ul class="cards-list cards-list--foldable" id="cards-list--offers">
                     {% set options = { items: {'@page.children': '/offers'}, 'limit': 3, 'order': {'by': 'header.weight', 'dir': 'asc'} } %}
                     {% for offer in page.collection(options) %}
                         <li class="cards-item cards-item--foldable">
@@ -278,7 +278,7 @@
         <div class="block">
             <img src="{{ url('theme://assets/11_sales.png')|e }}" alt=""  class="block-meet__asset--1" />
 
-            <div class="block-meet" id="contact">
+            <div class="block-meet" id="block-meet">
                 <h2>{{ header.block_meet.title|blockTitle|raw }}</h2>
                 <div class="block-meet__content">
                     {% if header.block_meet.form.displayed %}
@@ -346,26 +346,18 @@
 
                         <h3 class="block-meet__contact-title">{{ header.block_meet.media.introduction }}</h3>
                         <ul class="block-meet__social-list">
+                            {% for item in config.header.social_media %}
                             <li class="block-meet__social-list-item">
-                                <a href="#" target="_blank" title="Github - Nouvelle fenêtre" class="block-meet__social-list-link">
-                                    <i class="fa-brands fa-github fa-xl"></i>
+                                <a
+                                        href="{{ item.url }}"
+                                        title="{{ item.text }} - Nouvelle fenêtre"
+                                        class="block-meet__social-list-link"
+                                        target="_blank"
+                                >
+                                    <i class="{{ item.icon ~ " fa-xl" }}"></i>
                                 </a>
                             </li>
-                            <li class="block-meet__social-list-item">
-                                <a href="#" target="_blank" title="LinkedIn - Nouvelle fenêtre" class="block-meet__social-list-link">
-                                    <i class="fa-brands fa-linkedin fa-xl"></i>
-                                </a>
-                            </li>
-                            <li class="block-meet__social-list-item">
-                                <a href="#" target="_blank" title="X (nouveau Twitter) - Nouvelle fenêtre" class="block-meet__social-list-link">
-                                    <i class="fa-brands fa-x-twitter fa-xl"></i>
-                                </a>
-                            </li>
-                            <li class="block-meet__social-list-item">
-                                <a href="#" target="_blank" title="Instagram - Nouvelle fenêtre" class="block-meet__social-list-link">
-                                    <i class="fa-brands fa-instagram fa-xl"></i>
-                                </a>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>

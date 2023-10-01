@@ -1,0 +1,152 @@
+title: Configuration
+
+form:
+  validation: loose
+
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Configuration
+
+          fields:
+            header.routable:
+              type: toggle
+              label: PLUGIN_ADMIN.ROUTABLE
+              help: PLUGIN_ADMIN.ROUTABLE_HELP
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              default: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.sitename:
+              type: text
+              label: Nom du site
+              validate:
+                required: true
+            header.header_logo:
+              type: file
+              label: Logo header
+              help: Ce logo s'affichera dans le header
+              accept:
+                - image/*
+            header.footer_logo:
+              type: file
+              label: Logo footer
+              help: Ce logo s'affichera sur fond "coquelicot" dans le footer
+              accept:
+                - image/*
+            header.main_menu:
+              name: links
+              type: list
+              style: vertical
+              label: Liens du menu principal
+              min: 2
+              fields:
+                .text:
+                  type: text
+                  label: Texte
+                .url:
+                  type: text
+                  label: URL
+                .target:
+                  type: selectize
+                  size: large
+                  label: Target
+                  selectize:
+                    options:
+                      - text: "_self"
+                        value: "_self"
+                      - text: "_blank"
+                        value: "_blank"
+                  default: "_self"
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+            header.social_media:
+              name: links
+              type: list
+              style: vertical
+              label: Réseaux sociaux
+              fields:
+                .text:
+                  type: text
+                  label: Texte
+                  help: Le texte s'affichera dans l'attribut title
+                .icon:
+                  type: text
+                  label: Classes de l'icône
+                  help: Ce champ permettra d'afficher la bonne icône Font Awesome
+                  validate:
+                    required: true
+                .url:
+                  type: text
+                  label: URL
+
+            header.menu_footer_1:
+              name: links
+              type: list
+              style: vertical
+              label: Liens du menu footer n°1
+              fields:
+                .text:
+                  type: text
+                  label: Texte
+                .url:
+                  type: text
+                  label: URL
+                .target:
+                  type: selectize
+                  size: large
+                  label: Target
+                  selectize:
+                    options:
+                      - text: "_self"
+                        value: "_self"
+                      - text: "_blank"
+                        value: "_blank"
+                  default: "_self"
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+            header.menu_footer_2:
+              name: links
+              type: list
+              style: vertical
+              label: Liens du menu footer n°2
+              fields:
+                .text:
+                  type: text
+                  label: Texte
+                .url:
+                  type: text
+                  label: URL
+                .target:
+                  type: selectize
+                  size: large
+                  label: Target
+                  selectize:
+                    options:
+                      - text: "_self"
+                        value: "_self"
+                      - text: "_blank"
+                        value: "_blank"
+                  default: "_blank"
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+
+            route:
+              type: parents
+              label: PLUGIN_ADMIN.PARENT
+              classes: fancy

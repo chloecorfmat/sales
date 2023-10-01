@@ -1,0 +1,67 @@
+title: Page d'erreur
+
+form:
+  validation: loose
+
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Page d'erreur
+
+          fields:
+            header.name:
+              type: text
+              label: Titre de la page
+              default: La page que vous cherchez %%n'existe pas%%
+
+            header.subtitle:
+              type: text
+              label: Sous-titre de la page
+              default: Erreur technique 404
+
+            header.text:
+              type: text
+              label: Texte
+
+            header.link.text:
+              type: text
+              label: Texte du bouton
+
+            header.link.classes:
+              type: text
+              label: Classes du bouton
+
+            header.link.url:
+              type: text
+              label: URL du bouton
+
+            header.link.target:
+              type: selectize
+              size: large
+              label: Attribut target du bouton
+              selectize:
+                options:
+                  - text: "_self"
+                    value: "_self"
+                  - text: "_blank"
+                    value: "_blank"
+              default: "_self"
+              classes: fancy
+              validate:
+                type: commalist
+
+            header.image:
+              type: file
+              label: Image
+              accept:
+                - image/*
+
+            route:
+              type: parents
+              label: PLUGIN_ADMIN.PARENT
+              classes: fancy

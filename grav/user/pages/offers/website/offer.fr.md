@@ -9,5 +9,6 @@ image:
         type: image/png
         size: 14077
         path: shine-girl-studying-online_270x270-modified.png
+routable: false
 ---
 
