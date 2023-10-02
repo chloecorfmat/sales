@@ -41,13 +41,13 @@ menu_footer_1:
         target:
             - _self
     -
-        text: CGV
-        url: /fr/cgv
+        text: 'Politique de confidentialité'
+        url: /fr/confidentialite
         target:
             - _self
     -
-        text: 'Politique de confidentialité'
-        url: /fr/confidentialite
+        text: CGV
+        url: /fr/cgv
         target:
             - _self
 menu_footer_2:

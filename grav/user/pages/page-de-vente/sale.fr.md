@@ -171,7 +171,7 @@ block_meet:
     form:
         message: 'Grâce au formulaire de contact, je reçois tes messages directement. Je te réponds dans un délai de 72h maximum.'
         displayed: true
-        action: '#'
+        action: 'https://formspree.io/f/mwkdwbdw'
     links:
         introduction: 'Tu peux aussi me contacter par :'
         links:

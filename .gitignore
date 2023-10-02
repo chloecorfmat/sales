@@ -29,6 +29,8 @@ grav/user/plugins/*
 grav/user/themes/quark/*
 grav/user/**/config/security.yaml
 
+grav/tmp/*
+
 # Environments
 .env
 .gravenv

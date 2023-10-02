@@ -1,17 +1,11 @@
-volumes:
-  grav-data:
-    driver: local
-    driver_opts:
-      type: none
-      device: $PWD/grav
-      o: bind
+version: "3.9"
 services:
   grav:
     build: ./
     ports:
       - 8080:80
     volumes:
-      - grav-data:/var/www/html
+      - ./grav:/var/www/html
   node:
     image: node:16
     volumes:
