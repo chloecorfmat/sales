@@ -3,17 +3,17 @@ title: Configuration
 routable: false
 main_menu:
     items:
-        text: 'Mes services'
+        text: 'Mes offres'
         url: '/fr#block-offers'
         target:
             - _self
     1:
-        text: 'À propos'
+        text: 'Ma présentation'
         url: '/fr#block-presentation'
         target:
             - _self
     2:
-        text: 'Me contacter'
+        text: 'Contacte-moi !'
         url: '/fr#block-meet'
         target:
             - _self

@@ -1,0 +1,16 @@
+---
+  all:
+    vars:
+      env: prod
+  children:
+    build:
+      hosts:
+        build:
+          ansible_connection: local
+    server:
+      hosts:
+        server:
+          ansible_host: 51.210.43.70
+          ansible_port: 22
+          ansible_user: ubuntu
+          ansible_python_interpreter: /usr/bin/python3

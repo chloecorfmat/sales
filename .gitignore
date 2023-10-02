@@ -50,3 +50,6 @@ tests/cache/*
 tests/error.log
 system/templates/testing/*
 /user/config/versions.yaml
+
+# Ansible
+ansible/build/*

@@ -1,7 +1,7 @@
 ---
 title: 'Site web personnalisé'
-content: "* Présentation de votre structure\n* Vente en ligne\n* Espace de contact\n* Exemples de vos services"
-content_detailed: "* Expertise en HTML, CSS, PHP et JavaScript\n* Framework : Symfony, Laravel, Vue.js\n* CMS : Grav, Drupal, Sulu\n* Conformité RGPD\n* Référencement\n* Certification Opquast en assurance qualité web"
+content: 'Que tu aies déjà un site web ou pas, **je t''accompagne pour réaliser ton projet**. Je t''aide à **définir tes besoins** et à **choisir les meilleures solutions techniques** à mettre en oeuvre. Ensuite, je le **développe** et peux le **mettre en ligne**.'
+content_detailed: "Je ne travaille pas avec une solution toute prête et m'adapte toujours à tes besoins.\n* Expertise en HTML, CSS, PHP et JavaScript\n* Framework & CMS\n* Conformité RGPD\n* Référencement naturel (SEO)"
 weight: 1
 image:
     shine-girl-studying-online_270x270-modified.png:

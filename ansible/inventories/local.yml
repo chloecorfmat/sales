@@ -1,0 +1,16 @@
+---
+all:
+  vars:
+    env: local
+    build_directory: "/Users/chloecorfmat/Documents/AE/Dev/sales/ansible/build"
+  children:
+    build:
+      hosts:
+        build:
+          ansible_connection: local
+          ansible_python_interpreter: /usr/bin/python3
+    server:
+      hosts:
+        server:
+          ansible_connection: local
+          ansible_python_interpreter: /usr/bin/python3
