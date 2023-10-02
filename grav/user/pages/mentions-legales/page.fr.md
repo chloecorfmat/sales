@@ -4,7 +4,7 @@ name: 'Mentions %%légales%%'
 paragraphs:
     -
         title: 'Identification de l''éditeur'
-        content: "Le site Chloé Corfmat (ci-après «\_**le Site**\_»), accessible à l’adresse [https://chloecorfmat.fr](https://chloecorfmat.fr) est édité par Chloé Corfmat (ci-après «\_**l'Editeur**\_»), dont le domicile est situé 2 Allée Anne-Marie Imbrecq, 44300 Nantes, France. \n\n\nL'Éditeur peut être contacté à l’adresse mail [contact@chloecorfmat.fr](mailto:contact@chloecorfmat.fr) ou au numéro +33 7 50 34 60 70."
+        content: "Le site Chloé Corfmat (ci-après «\_**le Site**\_»), accessible à l’adresse [https://chloecorfmat.fr](https://chloecorfmat.fr) est édité par Chloé Corfmat (ci-après «\_**l'Editeur**\_»), dont le domicile est situé 2 Allée Anne-Marie Imbrecq, 44300 Nantes, France. Elle est immatriculée au RCS de Nantes sous le numéro XXX (en cours d'immatriculation). \n\n\nL'Éditeur peut être contacté à l’adresse mail [contact@chloecorfmat.fr](mailto:contact@chloecorfmat.fr) ou au numéro +33 7 50 34 60 70."
     -
         title: 'Hébergeur du site internet'
         content: "Le site Chloé Corfmat est hébergé par OVH SAS (2 rue Kellermann, 59100 Roubaix, France).\nL’hébergeur est joignable par téléphone au numéro suivant\_: 1007."
