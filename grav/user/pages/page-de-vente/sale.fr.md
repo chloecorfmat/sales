@@ -13,7 +13,7 @@ hero:
         -
             links: link
             link:
-                text: 'Découvre mes services'
+                text: 'Découvrez mes services'
                 classes: 'btn btn--reverse btn--primary'
                 url: '#block-offers'
                 target: _self
@@ -29,7 +29,7 @@ hero:
                 url: ''
                 target: _self
             file:
-                text: 'Télécharge mon CV'
+                text: 'Téléchargez mon CV'
                 classes: 'btn btn--primary'
                 file:
                     CV-2023.pdf:
@@ -37,13 +37,13 @@ hero:
                         type: application/pdf
                         size: 602710
                         path: CV-2023.pdf
-    title: 'Me confier ton projet web, c''est être accompagné de l''idée à la mise en ligne'
-    text: 'Je suis Chloé Corfmat, **ingénieure & créative**. Je t''aide à **développer ta présence en ligne** sans dépendre des réseaux sociaux grâce à un site internet sur-mesure et accessible à tous.'
+    title: 'Me confier votre projet web, c''est être accompagné de l''idée à la mise en ligne'
+    text: 'Je suis Chloé Corfmat, **ingénieure & créative**. Je vous aide à **développer votre présence en ligne** sans dépendre des réseaux sociaux grâce à un site internet sur-mesure et accessible à tous.'
 block_why:
     cards:
         -
-            title: 'Pérennise ta  présence en ligne !'
-            content: 'Tu ne peux pas être sûr que les réseaux sociaux d''aujourd''hui existeront encore dans 10 ans. Avoir ton propre site internet, c''est t''assurer de **garder ton contenu en ligne tant que tu le voudras** !'
+            title: 'Pérennisez votre présence en ligne !'
+            content: 'Vous ne pouvez pas être certains que les réseaux sociaux d''aujourd''hui existeront encore dans 10 ans. Avoir votre propre site internet, c''est vous assurer de **garder votre contenu en ligne tant que vous le voudrez** !'
             image:
                 shine-online-video-conference_270x270.png:
                     name: shine-online-video-conference_270x270.png
@@ -51,8 +51,8 @@ block_why:
                     size: 16946
                     path: shine-online-video-conference_270x270.png
         -
-            title: 'Personnalise ta vitrine en ligne !'
-            content: 'En collaborant avec moi pour construire ton site web, tu auras une **vitrine à ton image**. Tu pourras totalement **personnaliser ton design, mais aussi tes contenus** en ajoutant des photos, des vidéos ou même des animations.'
+            title: 'Personnalisez votre vitrine en ligne !'
+            content: 'En collaborant avec moi pour construire votre site web, vous aurez une **vitrine à votre image**. Vous pourrez totalement **personnaliser votre design, mais aussi vos contenus** en ajoutant des photos, des vidéos ou même des animations.'
             image:
                 shine-hands-holding-light-bulb-magnifying-glass-pencil-and-coin_270x270.png:
                     name: shine-hands-holding-light-bulb-magnifying-glass-pencil-and-coin_270x270.png
@@ -60,19 +60,19 @@ block_why:
                     size: 16292
                     path: shine-hands-holding-light-bulb-magnifying-glass-pencil-and-coin_270x270.png
         -
-            title: 'N''exclus personne !'
-            content: 'L''**accessibilité web**, c''est permettre à tous, y compris aux **personnes handicapées de naviguer sur ton site.** Communiquer sur un site internet accessible à tous, c''est **garantir à tous de pouvoir souscrire à tes services et à tes produits**.'
+            title: 'N''excluez personne !'
+            content: 'L''**accessibilité web**, c''est permettre à tous, y compris aux **personnes handicapées de naviguer sur votre site.** Communiquer sur un site internet accessible à tous, c''est **garantir à tous de pouvoir souscrire à vos services et à vos produits**.'
             image:
                 shine-group-of-diverse-people_270x270.png:
                     name: shine-group-of-diverse-people_270x270.png
                     type: image/png
                     size: 18867
                     path: shine-group-of-diverse-people_270x270.png
-    title: 'Pourquoi as-tu %%besoin d''un site web%% ?'
+    title: 'Pourquoi avez-vous %%besoin d''un site web%% ?'
 block_presentation:
     lines:
         -
-            content: "### Je rêve d'un web 100% accessible\n\nJ'ai développé mon **premier site internet à 13 ans**. À l'époque, mon objectif était de comprendre comment fonctionne le web (et de contrer l'ennui des vacances de Pâques). C'est lors de ma 1ère année d'alternance, **en 2015, qu'on me parle pour la première fois d'accessibilité web**. Et depuis ce jour, il y a 8 ans, ce sujet ne m'a pas quitté et a été le **thème de plusieurs de mes exposés et mémoires d'élève-ingénieure** (dommage pour mes camarades qui en entendront parler souvent pendant ma formation) ! \n\nAujourd'hui, **je veux sensibiliser tous les acteurs du web** (entrepreneurs, développeurs, graphistes...) **à l'accessibilité pour rendre le web universel** (comme le souhaite Tim Berners-Lee, son créateur).\n\n**Pendant mon temps libre**, j'aime **faire des choses de mes dix doigts** comme de la couture, du crochet, de la gouache ou de l'aquarelle, mais aussi du scrapbooking ou de la linogravure. Quand je ne suis pas chez moi, j'aime faire du **sport** (vélo, pilate ou danse) et boire des chocolats blancs chauds accompagnés d'une pâtisserie dans un **coffee shop nantais**."
+            content: "### Je rêve d'un web 100% accessible\n\nJ'ai développé mon **premier site internet à 13 ans**. À l'époque, mon objectif était de comprendre comment fonctionne le web (et de contrer l'ennui des vacances de Pâques). C'est lors de ma 1ère année d'alternance, **en 2015, qu'on me parle pour la première fois d'accessibilité web**. Et depuis ce jour, il y a 8 ans, ce sujet ne m'a pas quitté et a été le **thème de plusieurs de mes exposés et mémoires d'élève-ingénieure** (dommage pour mes camarades qui en entendront parler souvent pendant ma formation) ! \n\nAujourd'hui, **je veux sensibiliser tous les acteurs du web** (entrepreneurs, développeurs, graphistes...) **à l'accessibilité pour rendre le web universel**.\n\n**Pendant mon temps libre**, j'aime **faire des choses de mes dix doigts** comme de la couture, du crochet, de la gouache ou de l'aquarelle, mais aussi du scrapbooking ou de la linogravure. Quand je ne suis pas chez moi, j'aime faire du **sport** (vélo, pilate ou danse) et boire des chocolats blancs chauds accompagnés d'une pâtisserie dans un **coffee shop nantais**."
             position:
                 - left
             button: link
@@ -102,7 +102,7 @@ block_presentation:
                 url: ''
                 target: _self
             file:
-                text: 'Lis mon CV détaillé'
+                text: 'Lisez mon CV détaillé'
                 classes: 'btn btn--primary'
                 file:
                     CV-2023.pdf:
@@ -120,8 +120,8 @@ block_presentation:
 block_steps:
     cards:
         -
-            title: 'J’analyse tes besoins'
-            content: "Je commence toujours par **échanger avec toi** pour **comprendre tes besoins**. \nEnsuite, j'**étudie ton projet** et imagine une **solution technique** (CMS, framework, outils...) et **humaine** (autre spécialiste : graphiste, UX / UI Designer, référencement naturel...) adaptée que nous pourrons mettre en oeuvre."
+            title: 'J’analyse vos besoins'
+            content: "Je commence toujours par **échanger avec vous** pour **comprendre vos besoins**. \nEnsuite, j'**étudie votre projet** et imagine une **solution technique** (CMS, framework, outils...) et **humaine** (autre spécialiste : graphiste, UX / UI Designer, référencement naturel...) adaptée que nous pourrons mettre en oeuvre."
             image:
                 shine-hr-manager-is-searching-for-a-resume-of-employee_270x270.png:
                     name: shine-hr-manager-is-searching-for-a-resume-of-employee_270x270.png
@@ -130,7 +130,7 @@ block_steps:
                     path: shine-hr-manager-is-searching-for-a-resume-of-employee_270x270.png
         -
             title: 'J’établis un devis'
-            content: "Après l'analyse de ton projet, **je reviens vers toi pour** :\n* soit de proposer un **devis** si je suis en mesure de t'aider en détaillant la solution technique\n* soit pour te **conseiller une autre solution ou un autre prestataire** si je ne suis pas capable de répondre à tes besoins"
+            content: "Après l'analyse de votre projet, **je reviens vers vous pour** :\n* soit vous proposer un **devis** si je suis en mesure de vous aider en détaillant la solution technique\n* soit pour vous **conseiller une autre solution ou un autre prestataire** si je ne suis pas capable de répondre à vos besoins"
             image:
                 shine-calculator-money-and-calendar-for-accounting_270x270.png:
                     name: shine-calculator-money-and-calendar-for-accounting_270x270.png
@@ -139,7 +139,7 @@ block_steps:
                     path: shine-calculator-money-and-calendar-for-accounting_270x270.png
         -
             title: 'Je reste disponible'
-            content: "Une fois le devis signé, je commence la **réalisation de ton projet**.\nNous sommes **en contact régulièrement** pour que je te présente l'avancement de ton site web et reste **disponible pour répondre à tes questions** durant toute la prestation.\nUne fois le projet terminée, tu peux toujours me contacter et je répondrai à tes questions."
+            content: "Une fois le devis signé, je commence la **réalisation de votre projet**.\nNous sommes **en contact régulièrement** pour que je vous présente l'avancement de votre site web et reste **disponible pour répondre à vos questions** durant toute la prestation.\nUne fois le projet terminée, vous pouvez toujours me contacter et je répondrai à vos questions."
             image:
                 shine-support-operator-helps-to-solve-the-problem_270x270.png:
                     name: shine-support-operator-helps-to-solve-the-problem_270x270.png
@@ -147,15 +147,15 @@ block_steps:
                     size: 14745
                     path: shine-support-operator-helps-to-solve-the-problem_270x270.png
     title: 'Travaillons %%ensemble%% !'
-    content: "**En travaillant avec moi, tu auras accès à :**\n* un suivi régulier pour être informer de l'avancement du projet\n* un espace de discussion privé pour échanger tout au long du projet\n* une réponse garantie par mail sous 72h ouvrées maximum (hors vacances)"
+    content: "**En travaillant avec moi, vous aurez accès à :**\n* un suivi régulier pour être informer de l'avancement du projet\n* un espace de discussion privé pour échanger tout au long du projet\n* une réponse garantie par mail sous 72h ouvrées maximum (hors vacances)"
 block_offers:
-    title: 'Je mets mon %%expertise%% à profit pour %%t''accompagner%%'
-    introduction: 'Ensemble, nous construisons ton **site internet sur-mesure et adapté à tes besoins**, **accessible aux personnes handicapées**, tout en respectant les standards d’**assurance qualité web**, les règles de **référencement naturel** (SEO) et les lois en matière de **protection des données**.'
+    title: 'Je mets mon %%expertise%% à profit pour %%vous accompagner%%'
+    introduction: 'Ensemble, nous construisons votre **site internet sur-mesure et adapté à vos besoins**, **accessible aux personnes handicapées**, tout en respectant les standards d’**assurance qualité web**, les règles de **référencement naturel** (SEO) et les lois en matière de **protection des données**.'
 block_chaton:
-    title: 'Discutons de %%ton projet%%'
-    content: "Contacte-moi pour que l’on **planifie ensemble un premier rendez-vous gratuit** pour échanger sur ton projet.\nCe sera l’occasion pour **toi** de **m'expliquer tes besoins et tes envies**. De mon côté, je te présenterai ce que je peux t'apporter et ma méthode de travail."
+    title: 'Discutons de %%votre projet%%'
+    content: "Contactez-moi pour que l’on **planifie ensemble un premier rendez-vous gratuit** pour échanger sur votre projet.\nCe sera l’occasion pour **vous** de **m'expliquer vos besoins et vos envies**. De mon côté, je vous présenterai ce que je peux vous apporter et ma méthode de travail."
     link:
-        text: 'Contacte-moi !'
+        text: 'Contactez-moi !'
         classes: 'btn btn--primary'
         url: '#block-meet'
         target:
@@ -169,11 +169,11 @@ block_testimonials:
 block_meet:
     title: 'Rencontrons-%%nous%% !'
     form:
-        message: 'Grâce au formulaire de contact, je reçois tes messages directement. Je te réponds dans un délai de 72h maximum.'
+        message: 'Grâce au formulaire de contact, je reçois vos messages directement. Je vous réponds dans un délai de 72h maximum.'
         displayed: true
         action: 'https://formspree.io/f/mwkdwbdw'
     links:
-        introduction: 'Tu peux aussi me contacter par :'
+        introduction: 'Vous pouvez aussi me contacter par :'
         links:
             -
                 text: E-mail
@@ -185,7 +185,7 @@ block_meet:
             -
                 text: Téléphone
                 text_clickable: '+33 7 50 34 60 70'
-                help: '(laisse-moi un message si je ne suis pas disponible)'
+                help: '(laissez-moi un message si je ne suis pas disponible)'
                 url: 'tel:+33750346070'
                 target:
                     - _self

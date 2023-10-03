@@ -13,7 +13,7 @@ main_menu:
         target:
             - _self
     2:
-        text: 'Contacte-moi !'
+        text: 'Contactez-moi !'
         url: '/fr#block-meet'
         target:
             - _self
@@ -36,7 +36,7 @@ social_media:
         url: null
 menu_footer_1:
     -
-        text: 'Mention légales'
+        text: 'Mentions légales'
         url: /fr/mentions-legales
         target:
             - _self
