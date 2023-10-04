@@ -52,7 +52,7 @@ block_why:
                     path: shine-online-video-conference_270x270.png
         -
             title: 'Construisez votre site sur-mesure !'
-            content: 'Vous avez besoin ou envie d''une **fonctionnalité innovante** ? Grâce à mes compétences d''ingénieure, j''**étudie pour vous les solutions techniques possibles** et **mets en oeuvre** la plus adaptée.'
+            content: 'Vous avez besoin d''une **fonctionnalité innovante** ? Grâce à mes compétences d''ingénieure, j''**étudie pour vous les solutions techniques possibles** et **mets en oeuvre** la plus adaptée.'
             image:
                 shine-hands-holding-light-bulb-magnifying-glass-pencil-and-coin_270x270.png:
                     name: shine-hands-holding-light-bulb-magnifying-glass-pencil-and-coin_270x270.png
