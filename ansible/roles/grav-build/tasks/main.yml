@@ -26,5 +26,5 @@
 
 - name: Stop docker
   community.docker.docker_compose:
-    project_src: "{{ build_directory }}/docker-compose.yml"
+    project_src: "{{ build_directory }}"
     state: absent

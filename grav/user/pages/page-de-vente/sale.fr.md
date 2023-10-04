@@ -51,8 +51,8 @@ block_why:
                     size: 16946
                     path: shine-online-video-conference_270x270.png
         -
-            title: 'Personnalisez votre vitrine en ligne !'
-            content: 'En collaborant avec moi pour construire votre site web, vous aurez une **vitrine à votre image**. Vous pourrez totalement **personnaliser votre design, mais aussi vos contenus** en ajoutant des photos, des vidéos ou même des animations.'
+            title: 'Construisez votre site sur-mesure !'
+            content: 'Vous avez besoin ou envie d''une **fonctionnalité innovante** ? Grâce à mes compétences d''ingénieure, j''**étudie pour vous les solutions techniques possibles** et **mets en oeuvre** la plus adaptée.'
             image:
                 shine-hands-holding-light-bulb-magnifying-glass-pencil-and-coin_270x270.png:
                     name: shine-hands-holding-light-bulb-magnifying-glass-pencil-and-coin_270x270.png
@@ -121,7 +121,7 @@ block_steps:
     cards:
         -
             title: 'J’analyse vos besoins'
-            content: "Je commence toujours par **échanger avec vous** pour **comprendre vos besoins**. \nEnsuite, j'**étudie votre projet** et imagine une **solution technique** (CMS, framework, outils...) et **humaine** (autre spécialiste : graphiste, UX / UI Designer, référencement naturel...) adaptée que nous pourrons mettre en oeuvre."
+            content: "Je commence toujours par **échanger avec vous** pour **comprendre vos besoins**. Je n'ai **pas de solution toute prête** à vous proposer. Mon objectif est de **construire avec vous le projet le plus adapté à votre activité** (votre métier, votre cible, la loi...), **à vos besoins** (fonctionnalité spécifique) et **à vos envies**. Il peut s'agir d'un site vitrine, d'une page de vente, d'un blog ou d'un site e-commerce. \n"
             image:
                 shine-hr-manager-is-searching-for-a-resume-of-employee_270x270.png:
                     name: shine-hr-manager-is-searching-for-a-resume-of-employee_270x270.png
@@ -130,7 +130,7 @@ block_steps:
                     path: shine-hr-manager-is-searching-for-a-resume-of-employee_270x270.png
         -
             title: 'J’établis un devis'
-            content: "Après l'analyse de votre projet, **je reviens vers vous pour** :\n* soit vous proposer un **devis** si je suis en mesure de vous aider en détaillant la solution technique\n* soit pour vous **conseiller une autre solution ou un autre prestataire** si je ne suis pas capable de répondre à vos besoins"
+            content: 'J''**étudie votre projet** et imagine une **solution technique** (CMS, framework, outils...) et **humaine** (autre spécialiste : graphiste, UX / UI Designer, référencement naturel...) adaptée que nous pourrons mettre en œuvre. Puis, je vous propose un **devis** en cohérence avec la solution la plus adéquate. Si vous avez besoin, je suis disponible pour répondre à vos interrogations.'
             image:
                 shine-calculator-money-and-calendar-for-accounting_270x270.png:
                     name: shine-calculator-money-and-calendar-for-accounting_270x270.png

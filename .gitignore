@@ -54,4 +54,4 @@ system/templates/testing/*
 /user/config/versions.yaml
 
 # Ansible
-ansible/build/*
+ansible/build
