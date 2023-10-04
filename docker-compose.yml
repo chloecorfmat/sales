@@ -6,6 +6,7 @@ services:
       - 8080:80
     volumes:
       - ./grav:/var/www/html
+    working_dir: /var/www/html
   node:
     image: node:16
     volumes:

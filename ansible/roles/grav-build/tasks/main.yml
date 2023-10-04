@@ -19,12 +19,28 @@
     dest: "{{ build_directory }}"
     version: "{{ tag }}"
 
+- name: Creating a file with content
+  copy:
+    dest: "{{ build_directory }}/.env"
+    content: |
+      COMPOSE_PROJECT_NAME="build"
+
 - name: Launch docker
   community.docker.docker_compose:
     project_src: "{{ build_directory }}"
     build: false
 
+- name: Install admin
+  ansible.builtin.shell:
+    cmd: docker compose exec grav bin/gpm install admin
+
 - name: Stop docker
   community.docker.docker_compose:
     project_src: "{{ build_directory }}"
     state: absent
+
+- name: Create a zip archive of build
+  community.general.archive:
+    path: "{{ build_directory }}"
+    dest: build.zip
+    format: zip

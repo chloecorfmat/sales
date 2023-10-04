@@ -191,5 +191,7 @@ block_meet:
                     - _self
     media:
         introduction: 'Je suis aussi présente sur les réseaux sociaux'
+metadata:
+    description: 'Ma super description'
 ---
 

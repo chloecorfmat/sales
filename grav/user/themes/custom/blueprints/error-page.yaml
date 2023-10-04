@@ -19,6 +19,14 @@ form:
               label: Titre de la page
               default: La page que vous cherchez %%n'existe pas%%
 
+            header.metadata:
+              toggleable: true
+              type: array
+              label: PLUGIN_ADMIN.METADATA
+              help: PLUGIN_ADMIN.METADATA_HELP
+              placeholder_key: PLUGIN_ADMIN.METADATA_KEY
+              placeholder_value: PLUGIN_ADMIN.METADATA_VALUE
+
             header.subtitle:
               type: text
               label: Sous-titre de la page

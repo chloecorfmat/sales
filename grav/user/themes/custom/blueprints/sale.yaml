@@ -25,6 +25,14 @@ form:
               validate:
                 type: bool
 
+            header.metadata:
+              toggleable: true
+              type: array
+              label: PLUGIN_ADMIN.METADATA
+              help: PLUGIN_ADMIN.METADATA_HELP
+              placeholder_key: PLUGIN_ADMIN.METADATA_KEY
+              placeholder_value: PLUGIN_ADMIN.METADATA_VALUE
+
             header.hero:
               type: fieldset
               title: Bloc "Hero"
