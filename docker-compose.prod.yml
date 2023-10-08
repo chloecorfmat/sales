@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  grav:
+    build: ./
+    ports:
+      - 8094:80
+    volumes:
+      - ./grav:/var/www/html
+      - ../shared/user/accounts:/var/www/html/user/accounts
+      - ../shared/user/pages:/var/www/html/user/pages
+    working_dir: /var/www/html
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sales.rule=Host(`chloecorfmat.fr`, `www.chloecorfmat.fr`)"
+      - "traefik.http.routers.sales.entrypoints=websecure"
+      - "traefik.http.routers.sales.middlewares=strip-www"
+networks:
+  web:
+    external: true

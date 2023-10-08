@@ -1,0 +1,19 @@
+- debug:
+    msg:
+      - "Start grav deploy"
+
+- name: "Create deploy directories"
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  loop:
+    - "{{ deploy_directory }}"
+    - "{{ deploy_directory }}/shared"
+
+- name: "Copy and unzip archive"
+  unarchive:
+    dest: "{{ deploy_directory }}"
+    src: "{{ build_directory }}/build-{{ tag | replace('/', '_' }}.zip"
+    mode: "0755"
+

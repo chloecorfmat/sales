@@ -47,8 +47,20 @@
     files: docker-compose.build.yml
     state: absent
 
+- name: Remove unused files
+  file:
+    path: "{{ build_directory }}/{{ item }}"
+    state: absent
+  loop:
+    - .git/
+    - ansible/
+    - .env
+    - docker-compose.build.yml
+    - README.md
+    - .gitignore
+
 - name: Create a zip archive of build
   community.general.archive:
     path: "{{ build_directory }}"
-    dest: build.zip
+    dest: "{{ build_directory }}/build-{{ tag | replace('/', '_' }}.zip"
     format: zip
