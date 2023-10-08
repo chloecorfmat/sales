@@ -14,6 +14,17 @@
 - name: "Copy and unzip archive"
   unarchive:
     dest: "{{ deploy_directory }}"
-    src: "{{ build_directory }}/build-{{ tag | replace('/', '_' }}.zip"
+    src: "{{ build_directory }}/build-{{ tag | replace('/', '_') }}.zip"
     mode: "0755"
 
+- name: Stop docker
+  community.docker.docker_compose:
+    project_src: "{{ deploy_directory }}/build"
+    files: docker-compose.prod.yml
+    state: absent
+
+- name: Launch docker
+  community.docker.docker_compose:
+    project_src: "{{ deploy_directory }}/build"
+    files: docker-compose.prod.yml
+    build: true

@@ -35,7 +35,7 @@
   community.docker.docker_compose:
     project_src: "{{ build_directory }}"
     files: docker-compose.build.yml
-    build: false
+    build: true
 
 - name: Install admin
   ansible.builtin.shell:
@@ -62,5 +62,5 @@
 - name: Create a zip archive of build
   community.general.archive:
     path: "{{ build_directory }}"
-    dest: "{{ build_directory }}/build-{{ tag | replace('/', '_' }}.zip"
+    dest: "{{ build_directory }}/build-{{ tag | replace('/', '_') }}.zip"
     format: zip

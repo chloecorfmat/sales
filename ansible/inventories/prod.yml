@@ -1,12 +1,15 @@
 ---
-  all:
-    vars:
-      env: prod
+all:
+  vars:
+    env: prod
+    build_directory: "/Users/chloecorfmat/Documents/AE/Dev/sales/ansible/build"
+    deploy_directory: "/opt/application/sales"
   children:
     build:
       hosts:
         build:
           ansible_connection: local
+          ansible_python_interpreter: /usr/bin/python3
     server:
       hosts:
         server:
