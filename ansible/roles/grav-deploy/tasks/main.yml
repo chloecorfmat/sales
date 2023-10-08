@@ -2,6 +2,8 @@
     msg:
       - "Start grav deploy"
 
+# Install on server unzip, pip and with pip install docker and docker-compose
+
 - name: "Create deploy directories"
   file:
     path: "{{ item }}"
@@ -16,6 +18,8 @@
     dest: "{{ deploy_directory }}"
     src: "{{ build_directory }}/build-{{ tag | replace('/', '_') }}.zip"
     mode: "0755"
+    owner: "www-data"
+    group: "www-data"
 
 - name: Stop docker
   community.docker.docker_compose:

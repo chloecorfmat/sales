@@ -28,6 +28,7 @@ grav/user/data/*
 !grav/user/data/.*
 grav/user/plugins/*
 !grav/user/plugins/.*
+!grav/user/plugins/chloe-corfmat-twig
 grav/user/themes/quark/*
 grav/user/**/config/security.yaml
 
