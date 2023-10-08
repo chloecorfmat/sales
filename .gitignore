@@ -22,6 +22,8 @@ igrav/mages/*
 !grav/images/.*
 grav/user/accounts/*
 !grav/user/accounts/.*
+grav/user/pages/*
+!grav/user/pages/.*
 grav/user/data/*
 !grav/user/data/.*
 grav/user/plugins/*
@@ -55,3 +57,5 @@ system/templates/testing/*
 
 # Ansible
 ansible/build
+ansible/deploy
+ansible/*.zip

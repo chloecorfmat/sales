@@ -25,6 +25,12 @@
     content: |
       COMPOSE_PROJECT_NAME="build"
 
+- name: Stop docker
+  community.docker.docker_compose:
+    project_src: "{{ build_directory }}"
+    files: docker-compose.build.yml
+    state: absent
+
 - name: Launch docker
   community.docker.docker_compose:
     project_src: "{{ build_directory }}"
@@ -38,6 +44,7 @@
 - name: Stop docker
   community.docker.docker_compose:
     project_src: "{{ build_directory }}"
+    files: docker-compose.build.yml
     state: absent
 
 - name: Create a zip archive of build
