@@ -11,6 +11,15 @@
     mode: '0755'
   loop:
     - "{{ deploy_directory }}"
+
+- name: "Create shared directory"
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+    owner: "www-data"
+    group: "www-data"
+  loop:
     - "{{ deploy_directory }}/shared"
 
 - name: "Copy and unzip archive"
@@ -20,6 +29,7 @@
     mode: "0755"
     owner: "www-data"
     group: "www-data"
+  become: true
 
 - name: Stop docker
   community.docker.docker_compose:

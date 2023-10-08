@@ -57,6 +57,7 @@ system/templates/testing/*
 /user/config/versions.yaml
 
 # Ansible
+ansible/inventories/prod.yml
 ansible/build
 ansible/deploy
 ansible/*.zip

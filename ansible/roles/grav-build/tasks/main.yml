@@ -41,6 +41,14 @@
   ansible.builtin.shell:
     cmd: cd build && docker compose exec grav bin/gpm install admin
 
+- name: Install plugins
+  ansible.builtin.shell:
+    cmd: "cd build && docker compose exec grav bin/gpm install {{ item }}"
+  loop:
+    - error
+    - markdown-notices
+    - problems
+
 - name: Stop docker
   community.docker.docker_compose:
     project_src: "{{ build_directory }}"
