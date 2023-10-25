@@ -1,0 +1,66 @@
+- debug:
+    msg:
+      - "Start grav backup"
+
+- name: "Create backups directory (remote)"
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  loop:
+    - "{{ deploy_directory }}/backup"
+
+- name: "Create backups directory (local)"
+  delegate_to: localhost
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  loop:
+    - "{{ backups_directory }}"
+
+- name: "Display Ansible date_time fact and register"
+  delegate_to: localhost
+  run_once: yes
+  set_fact:
+    datetime: "{{ ansible_date_time.year }}{{ ansible_date_time.month }}{{ ansible_date_time.day }}-{{ ansible_date_time.hour }}-{{ ansible_date_time.minute }}-{{ ansible_date_time.second }}"
+
+- name: Create a zip archive of files
+  community.general.archive:
+    path: "{{ deploy_directory }}/shared"
+    dest: "{{ deploy_directory }}/backups/{{ datetime }}_backup.zip"
+    format: zip
+
+- name: "Copy archive in backups directory (local)"
+  ansible.builtin.fetch:
+    src: "{{ deploy_directory }}/backups/{{ datetime }}_backup.zip"
+    dest: "{{ backups_directory }}/{{ datetime }}_backup.zip"
+    flat: true
+
+- name: List of backups by alphabetic order (with date) - remote
+  command: ls -v {{ deploy_directory }}/backups/
+  register: backups
+
+- name: Remove old backups (remote)
+  vars:
+    older_backups: "{{ backups.stdout_lines[:-3] }}"
+  when: (backups|length) > 3
+  file:
+    path: "{{ deploy_directory }}/backups/{{ item }}"
+    state: absent
+  loop: "{{ older_backups }}"
+
+- name: List of backups by alphabetic order (with date) - local
+  delegate_to: localhost
+  command: ls -v {{ backups_directory }}
+  register: backups
+
+- name: Remove old backups (local)
+  delegate_to: localhost
+  vars:
+    older_backups: "{{ backups.stdout_lines[:-3] }}"
+  when: (backups|length) > 3
+  file:
+    path: "{{ backups_directory }}/{{ item }}"
+    state: absent
+  loop: "{{ older_backups }}"

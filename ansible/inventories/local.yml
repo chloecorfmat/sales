@@ -4,6 +4,7 @@ all:
     env: local
     build_directory: "/Users/chloecorfmat/Documents/AE/Dev/sales/ansible/build"
     deploy_directory: "/Users/chloecorfmat/Documents/AE/Dev/sales/ansible/deploy"
+    backups_directory: "/Users/chloecorfmat/Documents/AE/Dev/sales/ansible/backups"
   children:
     build:
       hosts:

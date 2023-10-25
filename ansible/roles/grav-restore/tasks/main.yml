@@ -1,0 +1,30 @@
+- debug:
+    msg:
+      - "Start grav restore"
+
+- name: Stop docker
+  community.docker.docker_compose:
+    project_src: "{{ deploy_directory }}/build"
+    files: docker-compose.prod.yml
+    state: absent
+
+- name: "Remove shared directory"
+  file:
+    path: "{{ deploy_directory }}/shared"
+    state: absent
+  become: yes
+
+- name: "Copy and unzip archive"
+  unarchive:
+    dest: "{{ deploy_directory }}"
+    src: "{{ file }}"
+    mode: "0755"
+    owner: "www-data"
+    group: "www-data"
+  become: true
+
+- name: Launch docker
+  community.docker.docker_compose:
+    project_src: "{{ deploy_directory }}/build"
+    files: docker-compose.prod.yml
+    build: true
