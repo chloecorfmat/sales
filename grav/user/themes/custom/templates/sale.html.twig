@@ -6,8 +6,6 @@
             <img src="{{ url('theme://assets/01_sales.png')|e }}" alt="" class="block-hero__asset--1" />
 
             <div class="block-hero__content">
-                <img src="{{ url(header.hero.picture.file|first.path) }}" alt="{{ header.hero.picture.alt }}" class="block-hero__image"/>
-
                 <div class="block-hero__text">
                     <h1 class="block-hero__title">{{ header.hero.title }}</h1>
                     <div class="wysiwyg">
@@ -51,6 +49,8 @@
                         {% endfor %}
                     </div>
                 </div>
+
+                <img src="{{ url(header.hero.picture.file|first.path) }}" alt="{{ header.hero.picture.alt }}" class="block-hero__image"/>
             </div>
 
             <img src="{{ url('theme://assets/02_sales.png')|e }}" alt="" class="block-hero__asset--2"/>
@@ -100,7 +100,7 @@
                             </div>
 
                             {% if line.link.url is not empty or line.file.file|first.path is not empty %}
-                                <div class="btns-container btns-container--centered">
+                                <div class="btns-container">
                                     {% if line.button is same as('link') %}
                                         <a
                                                 href="{{ line.link.url }}"
