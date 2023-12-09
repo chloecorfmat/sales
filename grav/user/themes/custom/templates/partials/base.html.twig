@@ -37,7 +37,7 @@
 {% set config = page.collection(options)|first %}
 
 {% block header %}
-    <header class="header">
+    <header role="banner" class="header">
         <div class="header-banner">
             <a href="/" class="header-banner__home">
                 <img src="{{ '/configuration/' ~ url(config.header.header_logo|first.path) }}" alt="{{ config.header.sitename }}" />
@@ -48,7 +48,7 @@
                 <i class="fa-solid fa-xmark fa-2xl header-banner__burger--close" id="js--header-burger__button--close" title="Fermer le menu"></i>
             </button>
 
-            <nav class="header-nav" id="js--header-nav">
+            <nav role="navigation" class="header-nav" id="js--header-nav">
                 <ul class="header-nav__list">
                     {% for item in config.header.main_menu %}
                         <li class="header-nav__item">
@@ -87,7 +87,7 @@
 {% endblock %}
 
 {% block footer %}
-    <footer class="footer">
+    <footer role="contentinfo" class="footer">
         <div class="footer__container">
             <img src="{{ '/configuration/' ~ url(config.header.footer_logo|first.path) }}" alt="{{ config.header.sitename }}" class="footer__logo"/>
             <ul class="footer__list">
