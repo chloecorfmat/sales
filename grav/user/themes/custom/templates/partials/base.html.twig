@@ -37,6 +37,9 @@
 {% set config = page.collection(options)|first %}
 
 {% block header %}
+    <div class="quicklinks visually-hidden-focusable">
+        <a href="#main" class="quicklinks__item">Accéder au contenu principal</a>
+    </div>
     <header role="banner" class="header">
         <div class="header-banner">
             <a href="/" class="header-banner__home">
