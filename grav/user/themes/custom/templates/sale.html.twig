@@ -224,7 +224,7 @@
 
             <div class="block-steps" id="block-steps">
                 <h2>{{ header.block_steps.title|blockTitle|raw }}</h2>
-                <ul class="cards-list">
+                <ol class="cards-list">
                     {% for card in header.block_steps.cards %}
                         <li class="cards-item">
                             <img src="{{ url(card.image|first.path) }}" alt="" class="cards-item__image"/>
@@ -239,7 +239,7 @@
                             </div>
                         </li>
                     {% endfor %}
-                </ul>
+                </ol>
 
                 <div class="block-steps__infos wysiwyg">
                     {% markdown %}
