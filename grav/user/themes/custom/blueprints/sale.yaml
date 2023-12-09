@@ -58,7 +58,8 @@ form:
                     - image/*
                 header.hero.picture.alt:
                   type: text
-                  label: Attribut alt
+                  label: Attribut ALT
+                  description: 'Uniquement si l''image est porteuse d''informations'
                 header.hero.buttons:
                   name: buttons
                   type: list
